@@ -33,7 +33,7 @@ const categories = [
 const Home = () => {
   return (
     <div>
-      <Directory categories={categories} />;
+      <Directory categories={categories} />
       <Outlet />
     </div>
   );
