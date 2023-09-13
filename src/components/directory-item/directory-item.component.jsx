@@ -7,12 +7,13 @@ import {
 } from './directory-item.styles';
 
 const DirectoryItem = ({ category }) => {
-  const { imageUrl, title } = category;
+  const { imageUrl, title, route } = category;
+
   return (
     <DirectoryItemContainer>
-      <BackgroundImage imageUrl={imageUrl} />
+      <BackgroundImage $imageUrl={imageUrl} />
       <Body>
-        <NavLink to={`shop/${title}`}>
+        <NavLink to={route}>
           <h2>{title.toUpperCase()}</h2>
           <p>Shop Now</p>
         </NavLink>
